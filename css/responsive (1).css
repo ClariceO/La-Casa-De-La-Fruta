@@ -242,7 +242,7 @@
          float: none;
          text-align: center;
     }
-.     .filter-button-group button{
+     .filter-button-group button{
          font-size: 14px;
          padding: 5px 18px;
 		 margin-bottom: 3px;
@@ -328,5 +328,13 @@
 	.side-menu p{
 		display: none;
 	}
+/*------------------------------added for form----------------*/
+    .container-1{
+        max-width: 100%;
+    }
+    form .user-details-1 .input-box-1{
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
  
