@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>La Casa De La Fruta</title>
+    <title>La Casa De Fruta</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -80,6 +80,9 @@
 						<li class="nav-item active"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
+                <!-- /.navbar-collapse -->
+
+               
             </div>
 
         </nav>
@@ -122,7 +125,7 @@
                 <div class="col-lg-8 col-sm-12">
                     <div class="contact-form-right">
                         <h2 style='text-align: center;' >SEND US AN INQUIRY</h2>
-                        <form id="contactForm" action='recieve.html' method='POST'>
+                        <form id="contactForm" action='recieve.html' method='get'>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div style='max-width: 100%; text-align: center;'>
@@ -149,8 +152,10 @@
                                                 <textarea class="input-box-2" id="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
                                                 <div class="help-block with-errors"></div>
                                             </div>
-                                            <div class="button-1">
-                                                <input type="submit" value="Submit">
+                                            <div class="submit-button text-center">
+                                                <button class="btn hvr-hover" id="submit" type="submit" style='border-color: #000;border-width: 2px;'>Send Message</button>
+                                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                <div class="clearfix"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -160,22 +165,22 @@
                     </div>
                 </div>
 				<div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left" style="color: #000;">
+                    <div class="contact-info-left">
                         <h2>CONTACT INFO</h2>
                         <p>If you have any questions or inquiries, here is where you can contact us!</p>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"> </i>Address: 28 Stuart Hwy<br>Stuart Park NT 0820<br>Australia </p>
+                                <p><i class="fas fa-map-marker-alt"> </i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 87213 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"> </i><a id="phone" href="tel:+65 6753 9000">Phone:+61 8 6753 9000</a></label></p>
+                                <p><i class="fas fa-phone-square"> </i><a id="phone" href="tel:+65 9199 3238">Phone:+65 9199 3238</a></label></p>
                             </li>
                             <li>
-                                <p><i class="fas fa-envelope"></i><a id="mail" href="mailto:LaCasadeLAfruita@gmail.com">Email:LaCasadeLAfruita@gmail.com</a></p>
+                                <p><i class="fas fa-envelope"></i><a id="mail" href="mailto:contactinfo@gmail.com">Email:contactinfo@gmail.com</a></p>
                             </li>
                             <li>
                                 <div style="border:2px;border-color: #b0b435;">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3895.999985239937!2d130.83927775008877!3d-12.449721591156548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2cc09176bebbadd3%3A0x4d8b6581e50d9ab6!2s28%20Stuart%20Hwy%2C%20Stuart%20Park%20NT%200820%2C%20Australia!5e0!3m2!1sen!2sus!4v1628233211966!5m2!1sen!2sus"
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.714379195499!2d103.8484398!3d1.36953!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e7cb495e1278886!2sAMK%20Hub!5e0!3m2!1sen!2ssg!4v1625999203879!5m2!1sen!2ssg" 
                                     width="50%" height="250" style="border: 0px;width: 100%;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </li>
@@ -195,52 +200,82 @@
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/Australia-Carrot(1).jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-01.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/AJ5A7295_540x.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-02.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/Broccoli2020_540x.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-03.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/gallery-img-06(1).jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-04.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/instagram-img-01(1).jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/instagram-img-08.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-06.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/ladyfinger_540x.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-07.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/instagram-img-07.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-08.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/instagram-img-06.jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-09.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <a href="shop.html"><img src="images/img-pro-03(1).jpg" alt="Go to Shop"></a>
+                    <img src="images/instagram-img-05.jpg" alt="" />
+                    <div class="hov-in">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -266,7 +301,7 @@
                                 <h3>Locate Us</h3>
                                 <ul>
                                     <li>
-                                        <p><i class="fas fa-map-marker-alt"></i> Address: 28 Stuart Hwy<br>Stuart Park NT 0820<br>Australia </p>
+                                        <p><i class="fas fa-map-marker-alt"></i> Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
                                     </li>
                                 </ul>
                             </div>
@@ -279,7 +314,7 @@
     
         <!-- Start copyright  -->
         <div class="footer-copyright">
-            <p class="footer-company">All Rights Reserved. &copy; 2021 Design By : Wei Jian</p>
+            <p class="footer-company">All Rights Reserved. &copy; 2021 Design By : god</p>
         </div>
         <!-- End copyright  -->
 
