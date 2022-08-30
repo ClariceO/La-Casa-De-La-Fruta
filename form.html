@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>La Casa De La Fruta</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+   
+
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a href="shop.html" class="nav-link">SHOP</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="form.html">Order Here</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>  
+            </div>
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Order Here</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Order Here</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start Gallery  -->
+    <div  style="padding-top: 70px;">
+        <div class="container">
+    <!-- End Gallery -->
+    <!-- Start Order Form -->
+    <div class="body1">
+        <div class="container-1">
+            <div class="title-1">
+                Billing Information
+            </div>
+            <form action="thankyou.html" method="POST">
+                <div class="user-details-1">
+                    <div class="input-box-1">
+                        <span class="details-1">Full Name</span>
+                        <input type="text" placeholder="Enter your Full name" required autofocus>
+                    </div>
+                    <div class="input-box-1">
+                        <span class="details-1, form">Address</span>
+                        <input type="text" placeholder="Enter your Address" required>
+                    </div>
+                    <div class="input-box-1">
+                        <span class="details-1">Email</span>
+                        <input type="text" placeholder="Enter your Email" required >
+                    </div>
+                    <div class="input-box-1">
+                        <span class="details-1">Hp Number</span>
+                        <input type="number" placeholder="Enter your Hp Number" required >
+                    </div>
+                    <div class="input-box-1">
+                        <span class="details-1">Payment type</span>
+                        <select required>
+                            <option value="">--Select--</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Credit Card">Credit Card</option>
+                        </select>
+                    </div>
+                    <div class="input-box-1">
+                        <span class="details-1">Payment Details</span>
+                        <input type="text" placeholder="Enter your Payment Details" required >
+                    </div>
+                    <table cellpadding="10">
+                        <thead>
+                            <tr>
+                                <td>Product</td>
+                                <td>Quantity</td>
+                                <td>Price</td>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Australia Carrot (0001)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$10.49</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Swiss Chard (0002)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$13.49</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>China Brocolli (0003)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$6.99</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>French Bean (0004)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$5.00</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Lady Finger (0005)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$3.99</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Cherry Tomato (0006)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$9.49</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Pumpkin (0007)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$6.99</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Strawberry (0008)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$15.99</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Tangerine (0009)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$8.99</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Australia Seedless Grapes (0010)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$12.49</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Green Beans (0011)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$12.49</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>France Green Lentils (0012)</td>
+                                <td><input type="number" value="0" min="0" max="99" required /></td>
+                                <td>$8.90</td>
+                                
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Total:</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                            
+                    </table>
+                </div>
+                <div class="button-1">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </div>
+            </form>
+        </div>
+    </div> 
+</div>         
+   
+    <!-- End Order Form -->
+
+    <!-- Start Instagram Feed  -->
+    <div class="instagram-box">
+        <div class="main-instagram owl-carousel owl-theme">
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/Australia-Carrot(1).jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/AJ5A7295_540x.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/Broccoli2020_540x.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/gallery-img-06(1).jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/instagram-img-01(1).jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/instagram-img-08.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/ladyfinger_540x.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/instagram-img-07.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/instagram-img-06.jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ins-inner-box">
+                    <a href="shop.html"><img src="images/img-pro-03(1).jpg" alt="Go to Shop"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Instagram Feed  -->
+
+
+    <!-- Start Footer  -->
+    <footer>
+         <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Locate Us</h3>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i> Address: 28 Stuart Hwy<br>Stuart Park NT 0820<br>Australia </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+    
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2021 Design By : Jeren</p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/inewsticker.js"></script>
+    <script src="js/bootsnav.js."></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

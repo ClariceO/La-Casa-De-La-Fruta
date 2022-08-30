@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Site Metas -->
+  <title>La Casa De La Fruta</title>
+  <meta name="keywords" content="Fruits and Vegetables">
+  <meta name="description" content="Online Market">
+  <meta name="author" content="Da best">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!--flipbox and the 2nd column css-->
+  <style> 
+    img{
+      max-width: 100%;
+      max-height: 102%;
+    }
+
+    .flip-box {
+      background-color: transparent;
+      border: 0px solid #7F8226;
+      perspective: 1000px;
+    }
+
+
+    /* This container is needed to position the front and back side */
+    .flip-box-inner {
+      position: relative;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      margin-bottom: 0px;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    .why-text.full-width h5,
+    .why-text h5 {
+      text-shadow: 1px 1px black;
+      color: white;
+    }
+    /*text color change*/
+    .why-text p, .text-center p{
+      color: black;
+    }
+
+    .sale {
+      text-shadow: 1px 1px 1px black;
+    }
+
+    /* Position the front and back side */
+    .flip-box-front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the back side */
+    .flip-box-back {
+      background-color: #7F8226;
+      color: white;
+      font-weight: 600;
+      transform: rotateY(180deg);
+      -webkit-backface-visibility: hidden;
+      /* Safari */
+      backface-visibility: hidden;
+      height: 250px;
+      position: relative;
+      text-align: center;
+      padding: 10%;
+      font-size: 95%;
+
+    }
+
+    div.why-text {
+      margin-bottom: 10%;
+    }
+
+    .why-text.full-width{
+      min-height: 90%;
+      max-height: 100%;
+    }
+
+  </style>
+
+<!--filter js-->
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+
+  // Show filtered elements
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+  }
+
+  // Hide elements that are not selected
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("bttn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName(" active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+</script>
+
+<!--filter and buttons css-->
+  <style>
+    .container{
+      overflow: hidden;
+    }
+    
+    .filterDiv {
+      display: none;
+      width: 100%;
+    }
+
+    .show {
+      display: list-item;
+    }
+
+    /* Style the buttons */
+    .bttn, .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 100%;
+      background-color: #7F8226;
+      color: white;
+      font-weight:bolder;      
+      border-radius: 0%;
+    }   
+
+    .list-group-tree .list-group-item:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .btn-light:not(:disabled):not(.disabled).active, 
+    .btn-light:not(:disabled):not(.disabled):active, 
+    .show>.btn-light.dropdown-toggle {
+      background-color: black;
+      color: white;
+    }
+
+    * {
+      list-style: none;
+    }
+
+    input[type="number"]{
+    height:25;
+    width: 50;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  </style>
+
+</head>
+
+<body>
+  <!-- Start Main Top -->
+  <header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+      <div class="container">
+        <!-- Start Header Navigation -->
+        <div class="navbar-header">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+            aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a>
+        </div>
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item active"><a href="shop.html" class="nav-link">SHOP</a></li>
+            <li class="nav-item"><a class="nav-link" href="form.html">Order Here</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+  </header>
+  <!-- End Main Top -->
+
+
+  <!-- Start Top Search -->
+  <div class="top-search">
+    <div class="container">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control" placeholder="Search">
+        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+      </div>
+    </div>
+  </div>
+  <!-- End Top Search -->
+
+  <!-- Start All Title Box -->
+  <div class="all-title-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Shop</h2>
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Shop</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End All Title Box -->
+
+  <!-- Start Shop Page  -->
+  <div class="shop-box-inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+          <div class="product-categori">
+            <div class="search-product">
+              <form action="shop.html" method="POST">
+                <input class="form-control" placeholder="Search here..." type="text">
+                <button type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="filter-sidebar-left">
+              <div class="title-left">
+                <h3>Categories</h3>
+              </div>
+
+              <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men"
+                data-children=".sub-men">
+                <div id="myBtnContainer">
+                  <button class="list-group-item list-group-item-action btn bttn"
+                    onclick="filterSelection('all')">All</button>
+                  <button class="list-group-item list-group-item-action btn bttn"
+                    onclick="filterSelection('fruits')">Fruits</button>
+                  <button class="list-group-item list-group-item-action btn bttn"
+                    onclick="filterSelection('vegetables')">Vegetables</button>
+                  <button class="list-group-item list-group-item-action btn bttn"
+                    onclick="filterSelection('others')">Others</button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="filter-sidebar-left">
+              <div class="title-left">
+                <h3>Sort by</h3>
+              </div>
+              <select id="basic" class="selectpicker show-tick form-control">
+                <option data-display="Select">--Please Select--</option>
+                <option value="1">Popularity</option>
+                <option value="2">High Price → High Price</option>
+                <option value="3">Low Price → High Price</option>
+                <option value="4">On sale</option>
+              </select>
+            </div>
+
+            <div class="filter-price-left">
+              <div class="title-left">
+                <h3>Price Range</h3>
+              </div>
+              <div class="price-box-slider" style="text-align: center;">
+                <div>
+                  <input  type="number" size="3" min="0" max="20" placeholder="Min" /> -
+                  <input placeholder="Max" type="number" size="3" min="0" max="20" />
+                </div>
+                <p>
+                  <input type="text" value="$0 - $20" readonly style="border:0; font-weight: bold; float:left;">
+                  <button class="btn bttn hvr-hover" type="submit" >Filter</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+          <div class="right-product-box">
+            <div class="product-item-filter row">
+              <div class="col-12 col-sm-8 text-center text-sm-left">
+                <p>Welcome to La Casa De La Fruta's Online Shop.</p>
+              </div>
+
+              <div class="col-12 col-sm-4 text-center text-sm-right">
+                <ul class="nav nav-tabs ml-auto">
+                  <li>
+                    <a class="nav-link active" href="#grid-view" data-toggle="tab"> <i class="fa fa-th"></i> </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#list-view" data-toggle="tab"> <i class="fa fa-list-ul"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="product-categorie-box">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv vegetables show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <div class="type-lb">
+                              <p class="sale">Product Code: 0001</p>
+                            </div>
+                            <img src="images/Australia-Carrot(1).jpg" class="img-fluid" alt="Carrot">
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Carrots are crunchy, tasty, and highly nutritious.
+                              They are a particularly good source of beta carotene,
+                              fiber, vitamin K1, potassium, and antioxidants.
+                              They have health benefits like weight-loss,
+                              lower cholesterol levels, and improve eye health.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Carrot | Australia | 1kg</h4>
+                        <h5> $10.49 (ON SALE)</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv vegetables show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/instagram-img-01(1).jpg" class="img-fluid" alt="Swiss Chard">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0002</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Swiss Chard is related to beets, but the root is inedible,
+                              and the leafy greens are valued for their mild flavor and high
+                              nutritional value</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Swiss Chard | Australia | 1kg</h4>
+                        <h5> $13.49</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv vegetables show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/Broccoli2020_540x.jpg" class="img-fluid" alt="Broccoli">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0003</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Broccoli is a great source of vitamins K and C.
+                              Vitamin C – builds collagen, which forms body tissue and
+                              bone, and helps cuts and wounds heal quicker.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Broccoli | China | /pc</h4>
+                        <h5> $6.99</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv vegetables show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/AJ5A7295_540x.jpg" class="img-fluid" alt="French Bean">
+                            <div class="type-lb">
+                              <p class="sale">Product Code: 0004</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>The French Bean is tender, crunchy and in season from mid summer to mid autumn.
+                              They are a versatile vegetable liked by everyone.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>French Bean | Malaysia | 500g</h4>
+                        <h5> $5.00 (ON SALE)</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/ladyfinger_540x.jpg" class="img-fluid" alt="Lady finger">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0005</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>This velvety green fruit which is again mistaken to be a vegetable is a fruit.
+                              Okra also is known as the lady's finger is a flowering plant with edible seed pods.
+                              Okra is primarily used as a vegetable. It is sometimes also used in soups and stews.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lady finger | Malaysia | 500g</h4>
+                        <h5> $3.99</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+
+                            <img src="images/img-pro-02(1).jpg" class="img-fluid" alt="Cherry tomato">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0006</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Slow-roasted with honey to accentuate their natural sweetness,
+                              the petite tomatoes turn out unbelievably sweet and bursting with
+                              tomato-y essence.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Cherry Tomato | Local | 500g</h4>
+                        <h5> $9.49</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/instagram-img-07.jpg" class="img-fluid" alt="Pumpkin">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0007</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Did you know? A pumpkin is a fruit.
+                              Vegetables are the edible portion of plants such as
+                              leaves, stems, roots, bulbs, flowers, and tubers.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Pumpkin | Malaysia | /pc</h4>
+                        <h5> $6.99</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/instagram-img-08.jpg" class="img-fluid" alt="Strawberry">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0008</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Did you know that if you don't plan to eat your strawberries the day you bring them home,
+                              the best place for them is in the crisper drawer of the refrigerator.
+                              It helps to maintain humidity and keep the berries from losing moisture and becoming dry.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Strawberry | 454g</h4>
+                        <h5> $15.99</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/instagram-img-06.jpg" class="img-fluid" alt="Tangerine">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0009</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Tangerine is sweet and easy to peel.
+                              Almost like a clementine, but it's slightly
+                              larger in size and duller in color
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Tangerine | 1kg</h4>
+                        <h5> $8.99</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv fruits show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/img-pro-03(1).jpg" class="img-fluid" alt="Grapes">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0010</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Did you know? Green and red grapes differ in color and taste.
+                              They also differ in the levels of antioxidants that they contain.
+                              Red grapes contain more antioxidants than the green ones.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Green Grapes | Australia | 500g</h4>
+                        <h5> $12.49</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv others show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/14528451039_45d9b687d6.jpg" class="img-fluid" alt="Green beans">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0011</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>Green Beans can be used to make pots of delicious green bean soup common in Southeast
+                              Asia.
+                              Give it a try and you will see! </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Green Beans | 1kg</h4>
+                        <h5> $12.49</h5>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 filterDiv others show">
+                      <div class="flip-box">
+                        <div class="flip-box-inner fix">
+                          <div class="flip-box-front box-img-hover">
+                            <img src="images/gallery-img-06(1).jpg" class="img-fluid" alt="France Green Lentils">
+                            <div class="type-lb">
+                              <p class="new">Product Code: 0012</p>
+                            </div>
+                          </div>
+                          <div class="flip-box-back">
+                            <p>If you’re searching for a way to add more meatless protein to your dinner roster,
+                              look no further than lentils.
+                              From soups and salads to braises and bakes,
+                              there are tons of delicious ways to bring lentils to your dinner table.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Green Lentils | France | 500g</h4>
+                        <h5> $8.90</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div role="tabpanel" class="tab-pane fade" id="list-view">
+
+                  <div class="list-view-box filterDiv vegetables show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <img src="images/Australia-Carrot(1).jpg" class="img-fluid" alt="Carrot">
+                            <div class="type-lb">
+                              <p class="sale">0001</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Australia Carrot</h4>
+                          <h5> <del>$ 20.00</del> $10.49</h5>
+                          <br />&nbsp;
+                          <p>
+                            Carrots are crunchy, tasty, and highly nutritious.
+                            They are a particularly good source of beta carotene,
+                            fiber, vitamin K1, potassium, and antioxidants.
+                            They have health benefits like weight-loss,
+                            lower cholesterol levels, and improve eye health.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv vegetables show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0002</p>
+                            </div>
+                            <img src="images/instagram-img-01(1).jpg" class="img-fluid" alt="Swiss Chard">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Swiss Chard</h4>
+                          <h5>$13.49</h5>
+                          <br />&nbsp;
+                          <p>Swiss Chard is related to beets, but the root is inedible,
+                            and the leafy greens are valued for their mild flavor and high
+                            nutritional value</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv vegetables show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0003</p>
+                            </div>
+                            <img src="images/Broccoli2020_540x.jpg" class="img-fluid" alt="Broccoli">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>China Brocolli</h4>
+                          <h5>$6.99</h5>
+                          <br />&nbsp;
+                          <p>Broccoli is a great source of vitamins K and C.
+                            Vitamin C – builds collagen, which forms body tissue and
+                            bone, and helps cuts and wounds heal quicker.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv vegetables show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="sale">0004</p>
+                            </div>
+                            <img src="images/AJ5A7295_540x.jpg" class="img-fluid" alt="French Bean">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>French Bean</h4>
+                          <h5> <del>$ 10.00</del> $5.00</h5>
+                          <br />&nbsp;
+                          <p>The French Bean is tender, crunchy and in season from mid summer to mid autumn.
+                            They are a versatile vegetable liked by everyone.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0005</p>
+                            </div>
+                            <img src="images/ladyfinger_540x.jpg" class="img-fluid" alt="Lady finger">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Lady Finger</h4>
+                          <h5>$3.99</h5>
+                          <br />&nbsp;
+                          <p>This velvety green fruit which is again mistaken to be a vegetable is a fruit.
+                            Okra also is known as the lady's finger is a flowering plant with edible seed pods.
+                            Okra is primarily used as a vegetable. It is sometimes also used in soups and stews.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0006</p>
+                            </div>
+                            <img src="images/img-pro-02(1).jpg" class="img-fluid" alt="Cherry tomato">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Cherry Tomato</h4>
+                          <h5>$9.49</h5>
+                          <br />&nbsp;
+                          <p>Slow-roasted with honey to accentuate their natural sweetness,
+                            the petite tomatoes turn out unbelievably sweet and bursting with
+                            tomato-y essence.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0007</p>
+                            </div>
+                            <img src="images/instagram-img-07.jpg" class="img-fluid" alt="Pumpkin">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Pumpkin</h4>
+                          <h5>$6.99</h5>
+                          <br />&nbsp;
+                          <p>Did you know? A pumpkin is a fruit.
+                            Vegetables are the edible portion of plants such as
+                            leaves, stems, roots, bulbs, flowers, and tubers.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0008</p>
+                            </div>
+                            <img src="images/instagram-img-08.jpg" class="img-fluid" alt="Strawberry">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Strawberry</h4>
+                          <h5>$15.99</h5>
+                          <br />&nbsp;
+                          <p>Did you know that if you don't plan to eat your strawberries the day you bring them home,
+                            the best place for them is in the crisper drawer of the refrigerator.
+                            It helps to maintain humidity and keep the berries from losing moisture and becoming dry.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0009</p>
+                            </div>
+                            <img src="images/instagram-img-06.jpg" class="img-fluid" alt="Tangerine">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Tangerine</h4>
+                          <h5>$8.99</h5>
+                          <br />&nbsp;
+                          <p>Tangerine is sweet and easy to peel.
+                            Almost like a clementine, but it's slightly
+                            larger in size and duller in color
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv fruits show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0010</p>
+                            </div>
+                            <img src="images/img-pro-03(1).jpg" class="img-fluid" alt="Grapes">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Australia Seedless Grapes</h4>
+                          <h5>$12.49</h5>
+                          <br />&nbsp;
+                          <p>Did you know? Green and red grapes differ in color and taste.
+                            They also differ in the levels of antioxidants that they contain.
+                            Red grapes contain more antioxidants than the green ones.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv others show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0011</p>
+                            </div>
+                            <img src="images/14528451039_45d9b687d6.jpg" class="img-fluid" alt="Green beans">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>Green Beans</h4>
+                          <h5>$12.49</h5>
+                          <br />&nbsp;
+                          <p>Green Beans can be used to make pots of delicious green bean soup common in Southeast Asia.
+                            Give it a try and you will see! </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-box filterDiv others show">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="products-single fix">
+                          <div class="box-img-hover">
+                            <div class="type-lb">
+                              <p class="new">0012</p>
+                            </div>
+                            <img src="images/gallery-img-06(1).jpg" class="img-fluid" alt="France Green Lentils">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                          <h4>France Green Lentils</h4>
+                          <h5>$8.90</h5>
+                          <br />&nbsp;
+                          <p>If you’re searching for a way to add more meatless protein to your dinner roster,
+                            look no further than lentils.
+                            From soups and salads to braises and bakes,
+                            there are tons of delicious ways to bring lentils to your dinner table.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; border-radius: 5px;">
+        <span><a style="width:100%; font-size: larger; color: white;" class="bttn hvr-hover" href="form.html">Click to order
+            NOW!</a></span>
+      </div>
+    </div>
+  </div>
+  <!-- End Shop Page -->
+
+
+  <!-- Start Footer  -->
+  <footer>
+    <div class="footer-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-top-box">
+              <h3>Business Time</h3>
+              <ul class="list-time">
+                <li>Monday - Friday: 08.00am to 05.00pm</li>
+                <li>Saturday: 10.00am to 08.00pm</li>
+                <li>Sunday: <span>Closed</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-top-box">
+              <h3>Locate Us</h3>
+              <ul>
+                <li>
+                  <p><i class="fas fa-map-marker-alt"></i> Address: 28 Stuart Hwy<br>Stuart Park NT 0820<br>Australia </p>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer  -->
+
+  <!-- Start copyright  -->
+  <div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2021 Design By : Clarice</p>
+  </div>
+  <!-- End copyright  -->
+
+  <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+  <!-- ALL JS FILES -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+
+
+  <!-- ALL PLUGINS -->
+  <script src="js/jquery.superslides.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script src="js/inewsticker.js"></script>
+  <script src="js/bootsnav.js."></script>
+  <script src="js/images-loded.min.js"></script>
+  <script src="js/isotope.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/form-validator.min.js"></script>
+  <script src="js/contact-form-script.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
